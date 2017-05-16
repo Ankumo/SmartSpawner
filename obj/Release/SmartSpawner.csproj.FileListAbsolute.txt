@@ -1,0 +1,5 @@
+C:\Users\Ankumo\Documents\visual studio 2017\Projects\SmartSpawner\SmartSpawner\bin\Release\SmartSpawner.dll
+C:\Users\Ankumo\Documents\visual studio 2017\Projects\SmartSpawner\SmartSpawner\bin\Release\SmartSpawner.pdb
+C:\Users\Ankumo\Documents\visual studio 2017\Projects\SmartSpawner\SmartSpawner\obj\Release\SmartSpawner.csprojResolveAssemblyReference.cache
+C:\Users\Ankumo\Documents\visual studio 2017\Projects\SmartSpawner\SmartSpawner\obj\Release\SmartSpawner.dll
+C:\Users\Ankumo\Documents\visual studio 2017\Projects\SmartSpawner\SmartSpawner\obj\Release\SmartSpawner.pdb
