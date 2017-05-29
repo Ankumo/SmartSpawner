@@ -172,8 +172,22 @@ namespace SmartSpawner
                 for (byte y = 0; y < Regions.WORLD_SIZE; y++)
                 {
                     ItemRegion currentItemRegion = ItemManager.regions[x, y];
-
                     List<ItemData> droppedItems = new List<ItemData>();
+
+                    if (!Configuration.Instance.clearPlayerItems)
+                    {                                        
+                        if (currentItemRegion.items.Count > 0)
+                        {
+                            for (int i = 0; i < currentItemRegion.items.Count; i++)
+                            {
+                                if (currentItemRegion.items[i].isDropped)
+                                {
+                                    droppedItems.Add(currentItemRegion.items[i]);
+                                }
+                            }
+                        }                       
+                    }
+
                     List<int> currentRegionSpawnsIndexes = new List<int>();
 
                     for (int i = 0; i < LevelItems.spawns[x, y].Count; i++)
@@ -181,22 +195,11 @@ namespace SmartSpawner
                         currentRegionSpawnsIndexes.Add(i);
                     }
 
-                    if (currentItemRegion.items.Count > 0)
-                    {
-                        for (int i = 0; i < currentItemRegion.items.Count; i++)
-                        {
-                            if (currentItemRegion.items[i].isDropped)
-                            {
-                                droppedItems.Add(currentItemRegion.items[i]);
-                            }
-                        }
-                    }
-
                     ItemManager.askClearRegionItems(x, y);
 
                     long itemsSpawnedCount = 0;
 
-                    if (currentRegionSpawnsIndexes.Count <= 0 && droppedItems.Count <= 0)
+                    if (currentRegionSpawnsIndexes.Count <= 0)
                     {
                         continue;
                     }
@@ -222,10 +225,13 @@ namespace SmartSpawner
 
                         itemsSpawnedCount++;
                     }
-
-                    for (var i = 0; i < droppedItems.Count; i++)
+                    
+                    if(!Configuration.Instance.clearPlayerItems)
                     {
-                        ItemManager.dropItem(droppedItems[i].item, droppedItems[i].point, false, true, false);
+                        for (var i = 0; i < droppedItems.Count; i++)
+                        {
+                            ItemManager.dropItem(droppedItems[i].item, droppedItems[i].point, false, true, false);
+                        }
                     }
                 }
             }
