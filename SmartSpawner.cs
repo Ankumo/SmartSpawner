@@ -199,6 +199,14 @@ namespace SmartSpawner
 
                     long itemsSpawnedCount = 0;
 
+                    if (!Configuration.Instance.clearPlayerItems)
+                    {
+                        for (var i = 0; i < droppedItems.Count; i++)
+                        {
+                            ItemManager.dropItem(droppedItems[i].item, droppedItems[i].point, false, true, false);
+                        }
+                    }
+
                     if (currentRegionSpawnsIndexes.Count <= 0)
                     {
                         continue;
@@ -225,14 +233,7 @@ namespace SmartSpawner
 
                         itemsSpawnedCount++;
                     }
-                    
-                    if(!Configuration.Instance.clearPlayerItems)
-                    {
-                        for (var i = 0; i < droppedItems.Count; i++)
-                        {
-                            ItemManager.dropItem(droppedItems[i].item, droppedItems[i].point, false, true, false);
-                        }
-                    }
+                                   
                 }
             }
         }
