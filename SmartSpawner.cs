@@ -29,7 +29,7 @@ namespace SmartSpawner
             Configuration.Load();
         }
 
-        public void Update()
+        public void FixedUpdate()
         {
             if (!Configuration.Instance.isAutosetted)
             {
@@ -44,7 +44,10 @@ namespace SmartSpawner
 
                 noticedAlready = false;
 
-                UnturnedChat.Say(Translate("items_have_been_respawned"), Color.cyan);
+                if(Configuration.Instance.resetMessageEnabled)
+                {
+                    UnturnedChat.Say(Translate("items_have_been_respawned"), Color.cyan);
+                }
             }
 
             if (!Configuration.Instance.isAttentionEnabled)
@@ -83,7 +86,10 @@ namespace SmartSpawner
 
                     lastRespawn = DateTime.Now;
 
-                    UnturnedChat.Say(Translate("items_have_been_respawned"), Color.cyan);
+                    if(Configuration.Instance.resetMessageEnabled)
+                    {
+                        UnturnedChat.Say(Translate("items_have_been_respawned"), Color.cyan);
+                    }
                     break;
                 case "auto":
                     if (command.Length > 3)

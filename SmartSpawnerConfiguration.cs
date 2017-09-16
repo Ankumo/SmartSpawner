@@ -7,6 +7,7 @@ namespace SmartSpawner
         public bool isAutosetted;
         public bool isAttentionEnabled;
         public bool clearPlayerItems;
+        public bool resetMessageEnabled;
 
         public double interval;
         public double noticeLatency;
@@ -16,6 +17,7 @@ namespace SmartSpawner
             isAutosetted = false;
             isAttentionEnabled = false;
             clearPlayerItems = false;
+            resetMessageEnabled = true;
 
             interval = 0.0;
             noticeLatency = 0.0;
