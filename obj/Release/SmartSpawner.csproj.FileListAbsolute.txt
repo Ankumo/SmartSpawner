@@ -3,3 +3,9 @@ C:\Users\Ankumo\Documents\visual studio 2017\Projects\SmartSpawner\SmartSpawner\
 C:\Users\Ankumo\Documents\visual studio 2017\Projects\SmartSpawner\SmartSpawner\obj\Release\SmartSpawner.csprojResolveAssemblyReference.cache
 C:\Users\Ankumo\Documents\visual studio 2017\Projects\SmartSpawner\SmartSpawner\obj\Release\SmartSpawner.dll
 C:\Users\Ankumo\Documents\visual studio 2017\Projects\SmartSpawner\SmartSpawner\obj\Release\SmartSpawner.pdb
+D:\Gereksizler\GitHub\SmartSpawner\bin\Release\SmartSpawner.dll
+D:\Gereksizler\GitHub\SmartSpawner\bin\Release\SmartSpawner.pdb
+D:\Gereksizler\GitHub\SmartSpawner\obj\Release\SmartSpawner.csprojAssemblyReference.cache
+D:\Gereksizler\GitHub\SmartSpawner\obj\Release\SmartSpawner.csproj.CoreCompileInputs.cache
+D:\Gereksizler\GitHub\SmartSpawner\obj\Release\SmartSpawner.dll
+D:\Gereksizler\GitHub\SmartSpawner\obj\Release\SmartSpawner.pdb
